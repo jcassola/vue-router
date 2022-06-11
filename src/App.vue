@@ -6,12 +6,11 @@
 
 <script>
 
-import AboutPage from '@/modules/pokemon/pages/AboutPage'
 
 export default {
   name: 'App',
   components: {
-    AboutPage
+
   }
 }
 </script>
