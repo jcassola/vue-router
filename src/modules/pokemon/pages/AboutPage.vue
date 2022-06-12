@@ -1,7 +1,7 @@
 <template>
     <h1>About Page</h1>
     <hr>
-    <!-- <h2>{{name}}</h2> -->
+    <h2>{{name}}</h2>
     <button @click="onChangeName">
         Cambiar nombre
     </button>
@@ -26,11 +26,13 @@ export default {
         console.log('beforeCreate')
     },
     created(){
+        this.name = 'Juan Carlos'
         console.log('created')
         //Peticiones HTTP
     },
     beforeMount(){
         console.log('beforeMount')
+        
     },
     mounted(){
         console.log('mounted')

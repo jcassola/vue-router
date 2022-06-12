@@ -15,18 +15,24 @@
 import { defineAsyncComponent } from 'vue'
 
 export default {
-    components: {
-        CustomLink: defineAsyncComponent(() => import('./CustomLink.vue'))
-    },
-    data(){
+
+    data(){ 
         return {
             links: [
-                {to: '/home', name: 'Pokemons'},
-                {to: '/pokemonid/50', name: 'Por ID'},
-                {to: '/about', name: 'About'},
+                {to: 'pokemon-home', name: 'Pokemons'},
+                {to: 'pokemon-id', name: 'Por ID', id: 444},
+                {to: 'pokemon-about', name: 'About'},
+
+                {to: 'dbz-characters', name: 'Personajes'},
+                {to: 'dbz-about', name: 'DBZ-About'},
+
                 {to: 'https://google.com', name: 'Google'},
             ]
         }
+    },
+
+    components: {
+        CustomLink: defineAsyncComponent(() => import('./CustomLink.vue'))
     }
 }
 </script>
