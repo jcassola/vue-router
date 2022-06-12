@@ -38,6 +38,30 @@ const routes = [
 
         ]
     },
+    //DBZ routes
+    {
+    path: '/dbz',
+    name: 'dbz',
+    component: () => import(/*webpackChunkName: "DbzLayout"*/'../modules/dbz/layouts/DragonBallLayout'), 
+    children: [
+            {
+                path: 'characters',
+                name: 'dbz-characters',
+                component: () => import(/*webpackChunkName: "DbzCharacters"*/'../modules/dbz/pages/Characters'),
+            },
+            {
+                path: 'about',
+                name: 'dbz-about',
+                component: () => import(/*webpackChunkName: "DbzAbout"*/'../modules/dbz/pages/About'),
+            },
+            {
+                path: '',
+                redirect: {name: 'dbz-characters'}
+            },
+
+        ]
+
+    },
     {
         path: '/:pathMatch(.*)*',
         name: 'no-found',
